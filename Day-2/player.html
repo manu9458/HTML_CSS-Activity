@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		input
+		{
+			align-content: left;
+		}
+        #qr{
+            width: 50%;
+            background-color: blue;
+            display: inline-block;
+        }
+        .red-star{
+            color: red;
+        }
+        #outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+	</style>
+</head>
+<body>
+	<!--<center>
+	<table style="width:50% ">
+<tr style="background-color:blue;">
+<th>Player Details</th>
+</tr>
+</table>
+</center>
+
+<center>
+	<table style="width:50% ">
+<tr style="background-color:powderblue;">
+<th>
+	<form style="text-align: left; padding-left: 30%;">
+		
+		
+		Name:<span class="red-star">*</span><input type="text" name="" id="" required ><br><br>
+		
+		Date of Birth:<span class="red-star">*</span> <input type="date" name="" id=""><br><br>
+		
+		Age:<span class="red-star">*</span><input type="text" name=""><br><br>
+		
+		Email:<span class="red-star">*</span> <input type="email" name="" id=""><br><br>
+		
+		Country:<select name="">
+        <option>India</option>
+        <option>Pakistan</option>
+        <option>Bangladesh</option>
+        <option>ShriLanka</option>
+        <option>Bhutan</option>
+        <option>Other</option>
+        </select><br><br>
+
+        Skill:<input type="checkbox" id="checkbox">
+        <label for="checkbox">Batting</label>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">Bowling</label><br><br>
+
+        Bat Style:<input type="radio" id="radio">
+        <label for="radio">Right Handed</label>
+        <input type="radio" id="radio">
+        <label for="radio">Left Handed</label><br><br>
+
+        Bowl Style:<input type="radio" id="radio">
+        <label for="radio">Right Handed</label>
+        <input type="radio" id="radio">
+        <label for="radio">Left Handed</label><br><br>
+
+
+        Match:<span class="red-star">*</span><input type="text" name="" id=""><br><br>
+
+        Run:<span class="red-star">*</span><input type="text" name="" id=""><br><br>
+
+        Witcket:<span class="red-star">*</span><input type="text" name="" id=""><br><br>
+
+
+
+
+	</form>
+</th>
+</tr>
+</table>
+</center>
+
+
+
+</th>
+</tr>
+</table>
+</center>
+	
+	
+
+</table>
+</center>
+<div id="outer">
+    <div class="inner"><button type="submit" class="msgBtn" onClick="return false;" >Submit</button></div>
+    <div class="inner"><button type="submit" class="msgBtn2" onClick="return false;">Reset</button></div>
+  </div>
+-->
+<center>
+    <h1 style="background-color: blue;width: 50%; padding: 2px;">Player Details</h1>
+<table style="background-color: aqua; width: 50%;padding: 89px;">
+    <form action="/action_page.php">
+        <tr>
+            <td>
+                <label for="name">Name</label><span class="red-star">*</span>
+            </td>
+            <td><input type="text" placeholder="Enter your name"</td>
+        </tr>
+        <tr>
+            <td><label>DOB</label><span class="red-star">*</span></td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td><label>Age</label><span class="red-star">*</span></td>
+            <td><input type="number" placeholder="Enter your age"></td>
+        </tr>
+        <tr>
+            <td><label >Email Id</label><span class="red-star">*</span></td>
+            <td><input type="email" placeholder="Enter your mail"></td>
+        </tr>
+        <tr>
+            <td><label>Country</label><span class="red-star">*</span></td>
+            <td><label for="cars"></label>
+
+                <select>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  
+                </select></td>
+        </tr>
+        <tr>
+        <td><label>Skill</label><span class="red-star">*</span></td>
+        <td><input type="checkbox"><label>Bating</label>
+        <input type="checkbox"><label>Bowling</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label>Bat Style</label><span class="red-star">*</span>
+            </td>
+            <td>
+                <input type="radio"><label>Right Handed</label>
+                <input type="radio"><label>Left Handed</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Bowl Style</label><span class="red-star">*</span>
+            </td>
+            <td>
+                <input type="radio"><label>Right Handed</label>
+                <input type="radio"><label>Left Handed</label>
+            </td>
+        </tr>
+<tr>
+    <td>
+        <label>Matchs</label><span class="red-star">*</span>
+    </td>
+    <td>
+        <input type="text" placeholder="Match Played">
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Runs</label><span class="red-star">*</span>
+    </td>
+    <td><input type="text" placeholder="Total runs scored"></td>
+</tr>
+<tr>
+    <td>
+        <label>Wicket</label><span class="red-star">*</span>
+    </td>
+    <td>
+        <input type="text"placeholder="Wicket">
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Achivement</label><span class="red-star">*</span>
+    </td>
+    <td><textarea placeholder="Your Achievent in Cricket"></textarea></td>
+</tr>
+    </form>
+</table>
+</center>
+<div style="text-align: center;">
+    <div for="Submit" style="background-color: rgb(23, 136, 211);
+    width: 30;
+    display: inline-block;
+    width: 670px;
+    padding: 15px;
+    margin: 13px;">
+        <button formtarget="_blank">Submit</button>
+        <button>Reset</button>
+    </div>
+</div>
+</body>
+</html>
