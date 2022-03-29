@@ -1,0 +1,368 @@
+Table Name: Production
+-----------------------------
+
+mysql> CREATE TABLE Productions2(Productionid int,Productionname varchar(30),Address varchar(40),Dateofstarted int,Ownername varchar(20));
+Query OK, 0 rows affected (0.81 sec)
+
+mysql> alter table productions2 ADD PRIMARY KEY (Productionid);
+Query OK, 0 rows affected (2.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+mysql> desc productions2;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| Productionid   | int         | NO   | PRI | NULL    |       |
+| Productionname | varchar(30) | YES  |     | NULL    |       |
+| Address        | varchar(40) | YES  |     | NULL    |       |
+| Dateofstarted  | int         | YES  |     | NULL    |       |
+| Ownername      | varchar(20) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.08 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(9091,'Arkamediaworks','Hyderabad',2001,'Shobu Yarlagadda');
+Query OK, 1 row affected (0.19 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(8892,'Lyca Productions','Chennai',2014,'Subaskaran');
+Query OK, 1 row affected (0.13 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(1010,'Hari om Entertainment','Mumbai',2008,'Akshay Kumar');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(1988,'Red Chillies Entertainment','Mumbai',2003,'Shah Ruck');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(1899,'Viacom18 Studios','Mumbai',2008,'Ajit Andhare');
+Query OK, 1 row affected (0.14 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(7882,'DVV Entertainments','Hyderabad',1993,'DVV Danayya');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(6773,'Hombale Flims','Banglore',1995,'Vijay');
+Query OK, 1 row affected (0.41 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(7682,'Mythri Movie Makers','Hyderabad',2014,'Naveen Yeneni');
+Query OK, 1 row affected (0.47 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(1854,'Junglee Pictures','Mumbai',2014,'Vineeth Jain');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(2341,'CRM','Banglore',2017,'Manohar');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO Productions2(Productionid,Productionname,Address,Dateofstarted,Ownername) VALUES(1111,'STP','Chennai',2018,'Sree');
+Query OK, 1 row affected (0.18 sec)
+
+mysql> select * from productions2;
++--------------+----------------------------+-----------+---------------+------------------+
+| Productionid | Productionname             | Address   | Dateofstarted | Ownername        |
++--------------+----------------------------+-----------+---------------+------------------+
+|         1010 | Hari om Entertainment      | Mumbai    |          2008 | Akshay Kumar     |
+|         1111 | STP                        | Chennai   |          2018 | Sree             |
+|         1854 | Junglee Pictures           | Mumbai    |          2014 | Vineeth Jain     |
+|         1899 | Viacom18 Studios           | Mumbai    |          2008 | Ajit Andhare     |
+|         1988 | Red Chillies Entertainment | Mumbai    |          2003 | Shah Ruck        |
+|         2341 | CRM                        | Banglore  |          2017 | Manohar          |
+|         6773 | Hombale Flims              | Banglore  |          1995 | Vijay            |
+|         7682 | Mythri Movie Makers        | Hyderabad |          2014 | Naveen Yeneni    |
+|         7882 | DVV Entertainments         | Hyderabad |          1993 | DVV Danayya      |
+|         8892 | Lyca Productions           | Chennai   |          2014 | Subaskaran       |
+|         9091 | Arkamediaworks             | Hyderabad |          2001 | Shobu Yarlagadda |
++--------------+----------------------------+-----------+---------------+------------------+
+11 rows in set (0.05 sec)
+
+
+
+
+
+
+
+
+
+
+
+Table Name :- Movie
+-------------------------------------------------------------------------------------------------------------------------------
+
+mysql> create table movie (Movieid int,Moviename varchar(30),Heroname varchar(30),Heroine varchar(30),Releasedate Date,Language varchar(15),Length int,Movietype varchar(25),Productionid int);
+Query OK, 0 rows affected (2.57 sec)
+
+mysql> desc movie;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Movieid      | int         | NO   | PRI | NULL    |       |
+| Moviename    | varchar(30) | YES  |     | NULL    |       |
+| Heroname     | varchar(30) | YES  |     | NULL    |       |
+| Heroine      | varchar(30) | YES  |     | NULL    |       |
+| Releasedate  | date        | YES  |     | NULL    |       |
+| Language     | varchar(15) | YES  |     | NULL    |       |
+| Length       | int         | YES  |     | NULL    |       |
+| Movietype    | varchar(25) | YES  |     | NULL    |       |
+| Productionid | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+9 rows in set (0.07 sec)
+
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(201,'Bahubali The Beginning','Prabhas','Tamannah','10/07/15','Telugu',21,'Drama Fantasy',9091);
+Query OK, 1 row affected (0.35 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(501,'Two','Rajnikant','Amy','29/11/18','Tamil',20,'Scientific',8892);
+Query OK, 1 row affected (0.19 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(577,'Aval','Siddarth','Andrea','03/11/17','Tamil',14,'Horror',1899);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(101,'Holiday','Akshay Kumar','Sonakshi','06/06/14','Hindi',15,'Crime Thriller',1010);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(151,'Zero','Shah ruck','Katrina Kaif','21/12/18','Hindi',16,'Scientific',1988);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(131,'Padmavat','Shahid Kapoor','Deepika Padukone','25/01/18','Hindi',21,'Drama Epic',1899);
+Query OK, 1 row affected (0.20 sec)
+
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(146,'Andhadhun','Ayushman','Radika Apte','05/10/18','Hindi',16,'Crime Thriller',1899);
+Query OK, 1 row affected (0.13 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(231,'Bharath Ane nenu','Mahesh Babu','Kiara','20/04/18','Telugu',15,'Thriller',7882);
+Query OK, 1 row affected (0.20 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(244,'Gruham','Siddhart','Andrea','17/11/18','Telugu',14,'Horror',1899);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(337,'KnG F Chapter1','Yash','Srinithi Shetty','21/12/18','Kannada',21,'Action Thriller',6773);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(224,'Rangasthalam','Ram Charan','Samatha','30/03/18','Telugu',17,'Drama Period',7682);
+Query OK, 1 row affected (0.17 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(136,'Badhaai Ho','Ayushman','Neena','18/10/18','Hindi',14,'Drama Comedy',1854);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(441,'The Villain','Sudeep','Amy','18/10/18','Kannada',16,'Drama',2341);
+Query OK, 1 row affected (0.13 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(206,'Maryada Ramanna','Sunil','Saloni','23/07/10','Telugu',19,'Drama',9091);
+Query OK, 1 row affected (0.44 sec)
+
+mysql> INSERT INTO movie(Movieid,Moviename,Heroname,Heroine,Releasedate,Language,Length,Movietype,Productionid) VALUES(211,'Khaidi No.150','chiranjeevi','Kajal','11/01/17','Telugu',20,'Drama Thriller',8892);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * from movie;
++---------+------------------------+---------------+------------------+-------------+----------+--------+-----------------+--------------+
+| Movieid | Moviename              | Heroname      | Heroine          | Releasedate | Language | Length | Movietype       | Productionid |
++---------+------------------------+---------------+------------------+-------------+----------+--------+-----------------+--------------+
+|     201 | Bahubali The Beginning | Prabhas       | Tamannah         | 2010-07-15  | Telugu   |     21 | Drama Fantasy   |         9091 |
+|     501 | Two                    | Rajnikant     | Amy              | 2029-11-18  | Tamil    |     20 | Scientific      |         8892 |
+|     577 | Aval                   | Siddarth      | Andrea           | 2003-11-17  | Tamil    |     14 | Horror          |         1899 |
+|     101 | Holiday                | Akshay Kumar  | Sonakshi         | 2006-06-14  | Hindi    |     15 | Crime Thriller  |         1010 |
+|     151 | Zero                   | Shah ruck     | Katrina Kaif     | 2021-12-18  | Hindi    |     16 | Scientific      |         1988 |
+|     131 | Padmavat               | Shahid Kapoor | Deepika Padukone | 2025-01-18  | Hindi    |     21 | Drama Epic      |         1899 |
+|     146 | Andhadhun              | Ayushman      | Radika Apte      | 2005-10-18  | Hindi    |     16 | Crime Thriller  |         1899 |
+|     231 | Bharath Ane nenu       | Mahesh Babu   | Kiara            | 2020-04-18  | Telugu   |     15 | Thriller        |         7882 |
+|     244 | Gruham                 | Siddhart      | Andrea           | 2017-11-18  | Telugu   |     14 | Horror          |         1899 |
+|     337 | KnG F Chapter1         | Yash          | Srinithi Shetty  | 2021-12-18  | Kannada  |     21 | Action Thriller |         6773 |
+|     224 | Rangasthalam           | Ram Charan    | Samatha          | 2030-03-18  | Telugu   |     17 | Drama Period    |         7682 |
+|     136 | Badhaai Ho             | Ayushman      | Neena            | 2018-10-18  | Hindi    |     14 | Drama Comedy    |         1854 |
+|     441 | The Villain            | Sudeep        | Amy              | 2018-10-18  | Kannada  |     16 | Drama           |         2341 |
+|     206 | Maryada Ramanna        | Sunil         | Saloni           | 2023-07-10  | Telugu   |     19 | Drama           |         9091 |
+|     211 | Khaidi No.150          | chiranjeevi   | Kajal            | 2011-01-17  | Telugu   |     20 | Drama Thriller  |         8892 |
++---------+------------------------+---------------+------------------+-------------+----------+--------+-----------------+--------------+
+
+
+15 rows in set (0.00 sec)
+
+QUERY 1:
+
+
+mysql> select Moviename,Movietype from movie where Movietype='Drama';
++-----------------+-----------+
+| Moviename       | Movietype |
++-----------------+-----------+
+| The Villain     | Drama     |
+| Maryada Ramanna | Drama     |
++-----------------+-----------+
+2 rows in set (0.00 sec)
+
+
+QUERY 2:
+
+mysql> select Moviename from movie where Heroname='Ayushman';
++------------+
+| Moviename  |
++------------+
+| Badhaai Ho |
+| Andhadhun  |
++------------+
+2 rows in set (0.00 sec)
+
+
+QUERY 3:
+
+mysql> select count(*) from movie where Length > 18;
++----------+
+| count(*) |
++----------+
+|        6 |
++----------+
+1 row in set (0.06 sec)
+
+
+QUERY 4:
+
+
+mysql> select Moviename from movie where Length<20;
++------------------+
+| Moviename        |
++------------------+
+| Holiday          |
+| Badhaai Ho       |
+| Andhadhun        |
+| Zero             |
+| Maryada Ramanna  |
+| Rangasthalam     |
+| Bharath Ane nenu |
+| Gruham           |
+| The Villain      |
+| Aval             |
++------------------+
+10 rows in set (0.00 sec)
+
+
+QUERY 5:
+
+mysql> select * FROM Movie where Moviename LIKE 'T%';
++---------+-------------+-----------+---------+-------------+----------+--------+------------+--------------+
+| Movieid | Moviename   | Heroname  | Heroine | Releasedate | Language | Length | Movietype  | Productionid |
++---------+-------------+-----------+---------+-------------+----------+--------+------------+--------------+
+|     441 | The Villain | Sudeep    | Amy     | 2018-10-18  | Kannada  |     16 | Drama      |         2341 |
+|     501 | Two         | Rajnikant | Amy     | 2029-11-18  | Tamil    |     20 | Scientific |         8892 |
++---------+-------------+-----------+---------+-------------+----------+--------+------------+--------------+
+2 rows in set (0.05 sec)
+
+
+QUERY 6:
+
+
+mysql> Select Moviename,Heroname,Heroine from movie where Length = 21;
++------------------------+---------------+------------------+
+| Moviename              | Heroname      | Heroine          |
++------------------------+---------------+------------------+
+| Padmavat               | Shahid Kapoor | Deepika Padukone |
+| Bahubali The Beginning | Prabhas       | Tamannah         |
+| KnG F Chapter1         | Yash          | Srinithi Shetty  |
++------------------------+---------------+------------------+
+3 rows in set (0.00 sec)
+
+
+QUERY 7:
+
+select Heroname,Heroine from movie where Releasedate > 15/03/2018;
++---------------+------------------+
+| Heroname      | Heroine          |
++---------------+------------------+
+| Akshay Kumar  | Sonakshi         |
+| Shahid Kapoor | Deepika Padukone |
+| Ayushman      | Neena            |
+| Ayushman      | Radika Apte      |
+| Shah ruck     | Katrina Kaif     |
+| Prabhas       | Tamannah         |
+| Sunil         | Saloni           |
+| chiranjeevi   | Kajal            |
+| Ram Charan    | Samatha          |
+| Mahesh Babu   | Kiara            |
+| Siddhart      | Andrea           |
+| Yash          | Srinithi Shetty  |
+| Sudeep        | Amy              |
+| Rajnikant     | Amy              |
+| Siddarth      | Andrea           |
++---------------+------------------+
+15 rows in set (0.05 sec)
+
+
+QUERY 8:
+
+mysql> Select COUNT(*) from movie where Movietype = 'Thriller';
++----------+
+| COUNT(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+
+QUERY 9:
+
+mysql> select count(*) from movie where releasedate < 15/03/2018;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+
+QUERY 10:
+
+
+mysql> select Releasedate from movie where Moviename='Zero';
++-------------+
+| Releasedate |
++-------------+
+| 2021-12-18  |
++-------------+
+1 row in set (0.00 sec)
+
+
+QUERY 11:
+
+
+mysql> select Releasedate from movie where Heroine = 'Amy';
++-------------+
+| Releasedate |
++-------------+
+| 2029-11-18  |
+| 2018-10-18  |
++-------------+
+2 rows in set (0.00 sec)
+
+
+QUERY 12:
+
+
+mysql> select count(*) from Movie where month(Releasedate)='10';
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.11 sec)
+
+
+
+QUERY 13:
+
+mysql> select Moviename,Language from movie where Productionid=1899;
++-----------+----------+
+| Moviename | Language |
++-----------+----------+
+| Padmavat  | Hindi    |
+| Andhadhun | Hindi    |
+| Gruham    | Telugu   |
+| Aval      | Tamil    |
++-----------+----------+
+4 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
