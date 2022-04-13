@@ -1,6 +1,6 @@
 ## Requirements
 
--Dependencies:
+- Dependencies:\
              - Spring Web
              - Mysql Driver
              - JPA
